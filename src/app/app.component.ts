@@ -24,12 +24,7 @@ const HEROES: Hero[] = [
         <span class="badge">{{hero.id}}</span> {{hero.name}}
       </li>
     </ul>    
-    <h2>{{selectedHero.name}} details!</h2>
-    <div><label>id: </label>{{selectedHero.id}}</div>
-    <div *ngIf="selectedHero">
-      <label>name: </label>
-      <input [(ngModel)]="selectedHero.name" placeholder="name">
-    </div>
+    <hero-detail [hero]="selectedHero"></hero-detail>
     `,
 
     styles: [`
